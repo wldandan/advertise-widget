@@ -2,39 +2,49 @@
 <head>
 	<link href="public/css/widget.css" rel="stylesheet" type="text/css"/>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="public/js/widget5.js"></script>
+	<script type="text/javascript" src="public/js/widget.js"></script>
 
 </head>
 <body>
 
-<!--<button id="btnAddElem">Add Element</button>-->
-
 <div id="container">
 	<div id="nav">
-		<a class="navItem" href="#">
-			<img class="off" src="public/img/1/buttonOff.png"></img>
-			<img class="on" src="public/img/1/buttonOn.png"></img>
-		</a>
-		<a class="navItem" href="#">
-			<img class="off" src="public/img/2/buttonOff.png"></img>
-			<img class="on" src="public/img/2/buttonOn.png"></img>
-		</a>
-		<a class="navItem" href="#">
-			<img class="off" src="public/img/3/buttonOff.png"></img>
-			<img class="on" src="public/img/3/buttonOn.png"></img>
-		</a>
-		<a class="navItem" href="#">
-			<img class="off" src="public/img/4/buttonOff.png"></img>
-			<img class="on" src="public/img/4/buttonOn.png"></img>
-		</a>
-		<a class="navItem" href="#">
-			<img class="off" src="public/img/5/buttonOff.png"></img>
-			<img class="on" src="public/img/5/buttonOn.png"></img>
-		</a>
+		<ul>
+		<li class="navItem" data-item="1">
+			<a href="#1">
+				<img class="off" src="public/img/1/buttonOff.png"/>
+				<img class="on" src="public/img/1/buttonOn.png"/>
+			</a>
+		</li>
+		<li class="navItem" data-item="2">
+			<a href="#2">
+				<img class="off" src="public/img/2/buttonOff.png"/>
+				<img class="on" src="public/img/2/buttonOn.png"/>
+			</a>
+		</li>
+		<li class="navItem" data-item="3">
+			<a href="#3">
+				<img class="off" src="public/img/3/buttonOff.png"/>
+				<img class="on" src="public/img/3/buttonOn.png"/>
+			</a>
+		</li>
+		<li class="navItem" data-item="4">
+			<a href="#4">
+				<img class="off" src="public/img/4/buttonOff.png"/>
+				<img class="on" src="public/img/4/buttonOn.png"/>
+			</a>
+		</li>
+		<li class="navItem" data-item="5">
+			<a href="#5">
+				<img class="off" src="public/img/5/buttonOff.png"/>
+				<img class="on" src="public/img/5/buttonOn.png"/>
+			</a>
+		</li>
+		</ul>
 	</div>
 
 	<div id="viewport">
-		<div class="advItem">
+		<div id="1" class="advItem">
 			<a href="#" class="mainImage">
 				<img src="public/img/1/main.jpg" class="mainImage" />
 			</a>
@@ -46,10 +56,82 @@
 
 			</div>
 			<ul>
-				<li><a><img class="thumb" src="public/img/1/thumb/1.jpg"></img></a></li>
-				<li><a><img class="thumb" src="public/img/1/thumb/2.jpg"></img></a></li>
-				<li><a><img class="thumb" src="public/img/1/thumb/3.jpg"></img></a></li>
-				<li><a><img class="thumb" src="public/img/1/thumb/4.jpg"></img></a></li>
+				<li><a><img class="thumb" src="public/img/1/thumb/1.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/1/thumb/2.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/1/thumb/3.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/1/thumb/4.jpg"/></a></li>
+			</ul>
+		</div>
+		<div id="2" class="advItem">
+			<a href="#" class="mainImage">
+				<img src="public/img/2/main.jpg" class="mainImage" />
+			</a>
+			<div class="caption">
+				<b>Melbourne's $1.5b master planned community</b>
+				<br>
+				<span>Train Station. Freeway Access. Future Town Centre. Parklands.</span>
+				<a href="#" class="cta"><span>Find out more</span></a>
+
+			</div>
+			<ul>
+				<li><a><img class="thumb" src="public/img/2/thumb/1.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/2/thumb/2.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/2/thumb/3.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/2/thumb/4.jpg"/></a></li>
+			</ul>
+		</div>
+		<div id="3" class="advItem">
+			<a href="#" class="mainImage">
+				<img src="public/img/3/main.jpg" class="mainImage" />
+			</a>
+			<div class="caption">
+				<b>Melbourne's $1.5b master planned community</b>
+				<br>
+				<span>Train Station. Freeway Access. Future Town Centre. Parklands.</span>
+				<a href="#" class="cta"><span>Find out more</span></a>
+
+			</div>
+			<ul>
+				<li><a><img class="thumb" src="public/img/3/thumb/1.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/3/thumb/2.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/3/thumb/3.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/3/thumb/4.jpg"/></a></li>
+			</ul>
+		</div>
+		<div id="4" class="advItem">
+			<a href="#" class="mainImage">
+				<img src="public/img/4/main.jpg" class="mainImage" />
+			</a>
+			<div class="caption">
+				<b>Melbourne's $1.5b master planned community</b>
+				<br>
+				<span>Train Station. Freeway Access. Future Town Centre. Parklands.</span>
+				<a href="#" class="cta"><span>Find out more</span></a>
+
+			</div>
+			<ul>
+				<li><a><img class="thumb" src="public/img/4/thumb/1.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/4/thumb/2.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/4/thumb/3.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/4/thumb/4.jpg"/></a></li>
+			</ul>
+		</div>
+		<div id="5" class="advItem">
+			<a href="#" class="mainImage">
+				<img src="public/img/5/main.jpg" class="mainImage" />
+			</a>
+			<div class="caption">
+				<b>Melbourne's $1.5b master planned community</b>
+				<br>
+				<span>Train Station. Freeway Access. Future Town Centre. Parklands.</span>
+				<a href="#" class="cta"><span>Find out more</span></a>
+
+			</div>
+			<ul>
+				<li><a><img class="thumb" src="public/img/5/thumb/1.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/5/thumb/2.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/5/thumb/3.jpg"/></a></li>
+				<li><a><img class="thumb" src="public/img/5/thumb/4.jpg"/></a></li>
 			</ul>
 		</div>
 	</div>
