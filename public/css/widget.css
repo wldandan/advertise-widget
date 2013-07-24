@@ -18,6 +18,7 @@
     width: 76px;
     top: 0px;
     left: 0px;
+    z-index: 1;
 }
 
 #nav ul{
@@ -56,7 +57,6 @@
 #viewport {
     position: absolute;
     left: 91px;
-    z-index: -1;
 }
 
 .caption {
@@ -126,4 +126,12 @@
 
 #viewport .advItem li img:hover{
     opacity: 1;
+}
+
+#viewport div.advItem.active{
+    display: block;
+}
+
+#viewport div.advItem {
+    display: none;
 }

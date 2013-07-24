@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    /*border: 1px;*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    width: 660px;
+    height: 380px;
+}
+
+#viewport {
+    /*width: 660px;*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    border-color: blue;
+    height: 380px;
+}
+
+#nav {
+    /*border-style: solid;*/
+    border-color: red;
+    /*border-width: 1px;*/
+    float: left;
+    width: 128px;
+    height: 380px;
+    top: 0px;
+    left: 0px;
+
+}
+
+#nav li.navItem {
+    list-style: none;
+    float: left;
+    display: block;
+    width: 137px;
+    text-align: left;
+    height: 76px;
+    line-height: 76px;
+    font-size: 76px;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    z-index: 100;
+    opacity: 0.5;
+}
+
+#nav li.navItem:hover {
+    opacity: 1;
+}
+
+
+#nav li.navItem:active {
+
+}
+
+
+#nav .navItem a img {
+    width: 137px;
+    height: 76px;
+}
+
+#viewport .advItem {
+    width: 660px;
+    height: 380px;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    /*opacity: 1;*/
+    /*z-index: 100;*/
+    display: block;
+}
+
+#viewport li img#mainImage {
+    width: 564px;
+    height: 369px;
+}
+
+#viewport li img.thumb {
+    width: 96px;
+    height: 65px;
+}
+
+.gallery {
+    width: 660px;
+    height: 380px;
+
+}
+
+.gallery .mainImage {
+    display: block;
+    width: 563px;
+    height: 380px;
+    /*float: right;*/
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.gallery .captionbkg, .gallery .caption {
+    position: absolute;
+    width: 563px;
+    left: 97px;
+    top: 323px;
+}
+
+.gallery .captionbkg {
+    background: #000;
+    z-index: 3;
+    height: 62px;
+    opacity: .6;
+}
+
+.gallery li {
+    display: block;
+    width: 96px;
+    height: 65px;
+    margin: 10px 0 0 0;
+    border: solid 1px #fff;
+    background: #000;
+}
+
+.gallery .caption {
+    z-index: 4;
+    height: 52px;
+    width: 513px;
+    overflow: hidden;
+    padding: 5px 10px 0 40px;
+    color: #fff;
+    font-family: arial, sans-serif;
+    display: block;
+    background: transparent;
+    background: #000 9;
+}
+
+.captionholder {
+    display: none;
+}
+
+.gallery ul {
+    display: block;
+    width: 98px;
+    height: 380px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 10px;
+    list-style: none;
+}
+
+/*#nav {*/
+/*height: 380px;*/
+/*width: 76px;*/
+/*top: 0px;*/
+/*left: 0px;*/
+/*}*/

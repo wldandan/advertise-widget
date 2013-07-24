@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.galleryv2 .mainImage {
+    display: block;
+    width: 563px;
+    height: 380px;
+    float: right;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.galleryv2 ul {
+    display: block;
+    width: 98px;
+    height: 380px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 10px;
+    list-style: none;
+}
+
+.galleryv2 li {
+    display: block;
+    width: 96px;
+    height: 65px;
+    margin: 10px 0 0 0;
+    border: solid 1px #fff;
+    background: #000;
+}
+
+.galleryv2 li img {
+    width: 96px;
+    height: 65px;
+}
+
+.galleryv2 li .captionholder {
+    display: none;
+}
+
+.galleryv2 .captionbkg, .galleryv2 .caption {
+    position: absolute;
+    width: 563px;
+    left: 97px;
+    top: 323px;
+}
+
+.galleryv2 .captionbkg {
+    background: #000;
+    z-index: 3;
+    height: 62px;
+    opacity: .6;
+    opacity: 1 \9;
+}
+
+.galleryv2 .caption {
+    z-index: 4;
+    height: 52px;
+    width: 513px;
+    overflow: hidden;
+    padding: 5px 10px 0 40px;
+    color: #fff;
+    font-family: arial, sans-serif;
+    display: block;
+    background: transparent;
+    background: #000\9;
+}
+
+.galleryv2 .cta {
+    display: block;
+    width: 96px;
+    height: 30px;
+    float: right;
+    margin: 11px 0 0 15px;
+    background: url(/images/rea/cta_new.png) no-repeat;
+}
+
+.galleryv2 .captiondisplay {
+    color: #fff;
+}
+
+.galleryv2 .captiondisplay span {
+    font-size: 11px;
+    display: block;
+}
+
+
+.aarea {
+    position: absolute;
+    z-index: 99;
+    display: block;
+    background: url(/images/pixel.gif) no-repeat;
+}
+
+#navContainerHorz, #navContainerVert {
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#navContainerHorz li, #navContainerVert li {
+    color: #fff;
+}
+
+#navContainerHorz li:hover, #navContainerVert li:hover {
+    color: #0f0;
+}

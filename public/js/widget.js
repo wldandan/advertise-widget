@@ -1,21 +1,30 @@
-$(function() {
+jQuery(function() {
 
     function changeNav(e){
         e.preventDefault();
-        $(".navItem.active").removeClass("active");
-        $(this).addClass('active');
+        jQuery(".navItem.active").removeClass("active");
+        jQuery(this).addClass('active');
     }
 
     function changeAdvItem(e){
         e.preventDefault();
-        $("#viewport div.advItem").hide();
-        var activeDivId = $(this).data("item");
+        jQuery("#viewport div.advItem").removeClass("active");
+        var activeDivId = jQuery(this).data("item");
         activeDivId = "#" + activeDivId;
-        $(activeDivId).show();
+        jQuery(activeDivId).addClass('active');
     }
 
-    $(".navItem").on('click', changeNav);
-    $(".navItem").on('click', changeAdvItem);
-    $("#nav li").first().click();
+    function changeAdvThumb(e){
+        e.preventDefault();
+        var imgSrc = jQuery(this).attr("src");
+        jQuery("#viewport div.advItem.active .mainImage img").attr('src',imgSrc);
+    }
+
+
+    jQuery(".navItem").on('click', changeNav);
+    jQuery(".navItem").on('click', changeAdvItem);
+    jQuery("#viewport .thumb").on('click', changeAdvThumb);
+
+    jQuery("#nav li").first().click();
 
 });
