@@ -1,6 +1,6 @@
 (function() {
 
-// Localize jQuery variable
+    // Localize jQuery variable
     var jQuery;
 
     /******** Load jQuery if not present *********/
@@ -32,7 +32,6 @@
         // Restore $ and window.jQuery to their previous values and store the
         // new jQuery in our local jQuery variable
         jQuery = window.jQuery.noConflict(true);
-        // Call our main function
         main();
 
     }
@@ -49,46 +48,45 @@
     }
 
     function load_js(){
+        var root_element = '#container ';
+
         function changeNav(e){
             e.preventDefault();
-            jQuery(".navItem.active").removeClass("active");
+            jQuery(root_element + ".navItem.active").removeClass("active");
             jQuery(this).addClass('active');
         }
 
         function changeAdvItem(e){
             e.preventDefault();
-            jQuery("#viewport div.advItem").removeClass("active");
+            jQuery(root_element + "#viewport div.advItem").removeClass("active");
             var activeDivId = jQuery(this).data("item");
             activeDivId = "#" + activeDivId;
-            jQuery(activeDivId).addClass('active');
+            jQuery(root_element + activeDivId).addClass('active');
         }
 
         function changeAdvThumb(e){
             e.preventDefault();
             var imgSrc = jQuery(this).attr("src");
-            jQuery("#viewport div.advItem.active .mainImage img").attr('src',imgSrc);
+            jQuery(root_element + "#viewport div.advItem.active .mainImage img").attr('src',imgSrc);
         }
 
 
-        jQuery(".navItem").on('click', changeNav);
-        jQuery(".navItem").on('click', changeAdvItem);
-        jQuery("#viewport .thumb").on('click', changeAdvThumb);
+        jQuery(root_element + ".navItem").on('click', changeNav);
+        jQuery(root_element + ".navItem").on('click', changeAdvItem);
+        jQuery(root_element + "#viewport .thumb").on('click', changeAdvThumb);
 
         jQuery("#nav li").first().click();
     }
 
 
-    function init_data(){
-        /******* Load HTML *******/
+    function init(){
         jQuery.getJSON("public/js/advs.json",  function(data) {
             process(data);});
     }
 
-    /******** Our main function ********/
     function main() {
-        jQuery(document).ready(function($) {
-            load_css();
-            init_data();
+        jQuery(document).ready(function(jQuery) {
+            init();
         });
     }
 
@@ -97,21 +95,40 @@
         var ul = jQuery('<ul></ul>').appendTo(nav);
     }
 
-    function build_nav_li(adv){
+    function build_nav_item(adv){
         var li = jQuery('<li class="navItem" data-item=' + adv.advId + '/>').appendTo('#container #nav ul');
         var a =  jQuery('<a></a>').appendTo(li);
         jQuery('<img class="off" src=' + adv.advLogoUrls[0]+ '></img>').appendTo(a);
         jQuery('<img class="on" src=' + adv.advLogoUrls[1]+ '></img>').appendTo(a);
     }
 
+    function build_view_port(){
+        jQuery('<div id="viewport">').appendTo('#container');
+    }
+
+    function build_view_port_item(adv){
+        var adv_item = jQuery('<div id=' + adv.advId + ' class="advItem" />').appendTo('#container #viewport');
+        jQuery('<a href="#" class="mainImage"><img src=' + adv.advImages[0]+ '></img></div>').appendTo(adv_item);
+
+        jQuery('<div class="caption"><b>'+adv.advMainText+'</b><br><span>'
+            + adv.advSecondaryText+'</span><a href="#" class="cta"><span>Find out more</span></a>').appendTo(adv_item);
+
+        var ul = jQuery('<ul></ul>').appendTo(adv_item);
+        ul.append('<li><a><img class="thumb" src='+ adv.advImages[0]+ '></img></a></li>')
+        ul.append('<li><a><img class="thumb" src='+ adv.advImages[1]+ '></img></a></li>')
+        ul.append('<li><a><img class="thumb" src='+ adv.advImages[2]+ '></img></a></li>')
+        ul.append('<li><a><img class="thumb" src='+ adv.advImages[3]+ '></img></a></li>')
+    }
 
 
     function process(data){
-        var advs = data.advs;
         build_nav();
-        jQuery.each(advs, function(index, adv) {
-            build_nav_li(adv);
+        build_view_port();
+        jQuery.each(data.advs, function(index, adv) {
+            build_nav_item(adv);
+            build_view_port_item(adv);
         });
+        load_css();
         load_js();
     }
 

@@ -60,6 +60,23 @@
 				"public/img/4/3.jpg",
 				"public/img/4/4.jpg"
 			]
+		},
+		{
+			"advId": 5,
+			"advMainText":"Melbourne's $1.5b master planned community",
+			"advSecondaryText":"Train Station. Freeway Access. Future Town Centre. Parklands.",
+			"advLogoUrls":[
+				"public/img/5/buttonOff.png",
+				"public/img/5/buttonOn.png"
+			],
+
+			"advImages":[
+				"public/img/5/1.jpg",
+				"public/img/5/2.jpg",
+				"public/img/5/3.jpg",
+				"public/img/5/4.jpg"
+			]
 		}
+
 
 	] }

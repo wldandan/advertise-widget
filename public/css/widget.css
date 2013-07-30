@@ -1,4 +1,4 @@
-* {
+#container * {
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,9 +10,11 @@
     top: 20px;
     left: 20px;
     position: relative;
+
+
 }
 
-#nav {
+#container #nav {
     position: absolute;
     height: 380px;
     width: 76px;
@@ -21,45 +23,45 @@
     z-index: 1;
 }
 
-#nav ul{
+#container #nav ul{
     list-style: none;
 }
 
-.navItem {
+#container .navItem {
     display: block;
     opacity: 0.5;
 }
 
-.navItem:hover {
+#container .navItem:hover {
     opacity: 1;
 }
 
-.navItem.active img.on{
+#container .navItem.active img.on{
     display: block;
 }
 
-.navItem.active img.off{
+#container .navItem.active img.off{
     display: none;
 }
 
-.navItem img.on{
+#container .navItem img.on{
     display: none;
 }
 
-.navItem img.off{
+#container .navItem img.off{
     display: block;
 }
 
-.navItem.active {
+#container .navItem.active {
     opacity: 1;
 }
 
-#viewport {
+#container #viewport {
     position: absolute;
     left: 91px;
 }
 
-.caption {
+#container .caption {
     position: absolute;
     bottom: 0px;
     height: 52px;
@@ -69,15 +71,15 @@
     font-family: arial, sans-serif;
     background: rgba(0,0,0, .6);
     padding-top: 15px;
-    text-indent: 20px;
+    text-indent: 65px;
 }
 
-.caption span{
+#container .caption span{
     font-size: 11px;
     display: block;
 }
 
-.caption .cta{
+#container .caption .cta{
     background: url(../img/cta_new.png) no-repeat;
     width: 96px;
     height: 30px;
@@ -86,20 +88,20 @@
     right: 10px;
 }
 
-.caption .cta span{
+#container .caption .cta span{
     display: none;
 }
 
-#viewport .advItem.selected{
+#container #viewport .advItem.selected{
     display: block;
 }
 
-#viewport .advItem {
+#container #viewport .advItem {
     display: none;
 }
 
 
-#viewport .advItem ul {
+#container #viewport .advItem ul {
     height: 380px;
     overflow: hidden;
     position: absolute;
@@ -108,7 +110,7 @@
     list-style: none;
 }
 
-#viewport .advItem ul li{
+#container #viewport .advItem ul li{
     display: block;
     width: 96px;
     height: 65px;
@@ -117,21 +119,21 @@
     background: #000;
 }
 
-#viewport .advItem li img.thumb {
+#container #viewport .advItem li img.thumb {
     width: 96px;
     height: 65px;
     opacity: 0.7;
     z-index: 100;
 }
 
-#viewport .advItem li img:hover{
+#container #viewport .advItem li img:hover{
     opacity: 1;
 }
 
-#viewport div.advItem.active{
+#container #viewport div.advItem.active{
     display: block;
 }
 
-#viewport div.advItem {
+#container #viewport div.advItem {
     display: none;
 }
